@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="stylesheet.css" rel="stylesheet">
+
 
    
   </head>
@@ -16,19 +16,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto">
-          <div class="card1"></div>
           <div class="card card-body text-center mt-5">
-            <img src ="krabs.png" alt="spongebob">
             <h1 class="heading display-5 pb-3">Tip Calculator</h1>
-
-            <p>Would you like to leave a tip at the Krusty Krab?</p>
-            <form action="Yes or No">
-              <input type="checkbox" id="tipyes" name="tipyes" value="Yes">
-              <label for="tipyes"> Yes</label>
-              <input type="checkbox" id="tipno" name="tipno" value="No">
-              <label for="tipyes"> No</label>
-              <p>If you pressed Yes, then enter your Total Bill to calculate the tip amount! </p>
-
             <form id="tip-form">
               <div class="form-group">
                 <div class="input-group">
@@ -56,7 +45,7 @@
               <h5>Results</h5>
               <div class="form-group">
                 <div class="input-group">
-                  <span class="input-group-addon">Tip Amount</span>
+                  <span class="input-group-addon">Tip amount</span>
                   <input type="number" class="form-control" id="tipAmount" disabled>
                 </div>
               </div>
@@ -65,13 +54,6 @@
                 <div class="input-group">
                   <span class="input-group-addon">Total Bill with Tip</span>
                   <input type="number" class="form-control" id="totalBillWithTip" disabled>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Tip Amount</span>
-                  <input type="number" class="form-control" id="" disabled>
                 </div>
               </div>
 
@@ -87,24 +69,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script>document.querySelector('#tip-form').onchange = function(){
 
-      var bill = Number(document.getElementById('billTotal').value);
-      var tip = document.getElementById('tipInput').value;
-      document.getElementById('tipOutput').innerHTML = `${tip}%`;
-      var tipValue = bill * (tip/100)
-      var finalBill = bill + tipValue
-    console.log(finalBill)
-    var tipAmount = document.querySelector('#tipAmount')
-    var totalBillWithTip = document.querySelector('#totalBillWithTip')
-    
-    tipAmount.value = tipValue.toFixed(2);
-     totalBillWithTip.value =finalBill.toFixed(2);
-    
-     //Show Results
-    
-      document.getElementById('results').style.display='block'
-    }
-    </script> 
   </body>
 </html>
